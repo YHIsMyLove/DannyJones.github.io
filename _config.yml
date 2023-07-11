@@ -4,16 +4,15 @@
 
 # Site
 title: DannyJones's Blog
-subtitle: ""
+subtitle: "DannyJones's Blog"
 description: "DannyJones的博客小站"
-keywords:
+keywords: Blog
 author: DannyJones
-language: zh_CN
 timezone: ""
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: http://www.dannyjones.top/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -28,6 +27,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
+language: zh_CN
 skip_render:
 
 # Writing
@@ -42,18 +42,18 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
-future: true
+future: false
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace: ""
   wrap: true
-  hljs: false
+  hljs: true
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ""
 
 # Home page setting
@@ -97,9 +97,32 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: butterfly
+theme: hexo-theme-matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ""
+
+# 搜索插件
+# npm install hexo-generator-search --save
+search:
+  path: search.xml
+  field: post
+
+# 帖子字数统计插件
+# npm i --save hexo-wordcount
+postInfo:
+  date: true
+  update: false
+  wordCount: false # set true.
+  totalCount: false # set true.
+  min2read: false # set true.
+  readCount: false # set true.
+
+# 将中文链接翻译成拼音（推荐） npm i hexo-permalink-pinyin --save
+# 如果您的文章标题为中文，则 Hexo 的默认永久链接将包含中文。但这不利于 ，
+# 评论也不支持中文链接。我们可以在生成帖子时使用 hexo-permalink-pinyin Hexo 插件在生成帖子时用中文拼音生成永久链接。SEOgitment
+permalink_pinyin:
+  enable: true
+  separator: "-" # default: '-'
