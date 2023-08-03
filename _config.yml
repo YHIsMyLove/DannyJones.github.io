@@ -99,13 +99,21 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: matery
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+# # Deployment
+# ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repo: https://github.com/YHIsMyLove/Blog.git
-  # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
+
+# deploy:
+#   type: ftpsync
+#   host: 192.168.0.108 # 主机地址
+#   port: 21
+#   user: admin # 用户名
+#   pass: wang123444 # 要上传到的目录
+#   delete: true # 上传本地文件是否删除ftp中的所有文件
+#   verbose: true # 是否打印调试信息
 
 # 搜索插件
 # npm install hexo-generator-search --save
